@@ -29,8 +29,6 @@ public class Main {
 				
 				boolean[][] possibleMoves = chessMatch.possibleMoves(source);
 				
-				System.out.println("POSI mov");
-				
 				UI.clearScreen();
 				UI.printBoard(chessMatch.getPieces(), possibleMoves);
 				
@@ -41,7 +39,6 @@ public class Main {
 				ChessPiece capturedPiece = chessMatch.performChessMove(source, target);
 				if(capturedPiece != null)
 					captured.add(capturedPiece);
-				
 				
 			} catch (ChessException e) {
 				System.out.println(e.getMessage());
